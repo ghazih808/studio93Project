@@ -420,7 +420,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                         return ListTile(
                                           leading: Text(
                                             _mealItem.name,
-                                            style: TextStyle(color: Colors.grey, fontSize: size.width * 0.03),
+                                            style: TextStyle(color: Colors.grey, fontSize: size.width * 0.027),
                                           ),
                                           title: Row(
                                             mainAxisAlignment: MainAxisAlignment.end,
@@ -654,13 +654,14 @@ class _MyHomePageState extends State<MyHomePage> {
                                         return ListTile(
                                           leading: Text(
                                             _mealItem.name,
-                                            style: TextStyle(color: Colors.grey, fontSize: size.width * 0.03),
+                                            style: TextStyle(color: Colors.grey, fontSize: size.width * 0.027),
                                           ),
                                           title: Row(
                                             mainAxisAlignment: MainAxisAlignment.end,
                                             children: [
                                               Text('${_mealItem.calCount} Cals'),
                                             ],
+
                                           ),
                                           trailing: _mealItem.flag
                                               ? InkWell(
@@ -879,7 +880,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                         return ListTile(
                                           leading: Text(
                                             _mealItem.name,
-                                            style: TextStyle(color: Colors.grey, fontSize: size.width * 0.03),
+                                            style: TextStyle(color: Colors.grey, fontSize: size.width * 0.027),
                                           ),
                                           title: Row(
                                             mainAxisAlignment: MainAxisAlignment.end,
@@ -1109,7 +1110,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                         return ListTile(
                                           leading: Text(
                                             _mealItem.name,
-                                            style: TextStyle(color: Colors.grey, fontSize: size.width * 0.03),
+                                            style: TextStyle(color: Colors.grey, fontSize: size.width * 0.027),
                                           ),
                                           title: Row(
                                             mainAxisAlignment: MainAxisAlignment.end,
@@ -1338,7 +1339,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                         return ListTile(
                                           leading: Text(
                                             _mealItem.name,
-                                            style: TextStyle(color: Colors.grey, fontSize: size.width * 0.03),
+                                            style: TextStyle(color: Colors.grey, fontSize: size.width * 0.027),
                                           ),
                                           title: Row(
                                             mainAxisAlignment: MainAxisAlignment.end,
@@ -1566,7 +1567,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                         return ListTile(
                                           leading: Text(
                                             _mealItem.name,
-                                            style: TextStyle(color: Colors.grey, fontSize: size.width * 0.03),
+                                            style: TextStyle(color: Colors.grey, fontSize: size.width * 0.027),
                                           ),
                                           title: Row(
                                             mainAxisAlignment: MainAxisAlignment.end,
