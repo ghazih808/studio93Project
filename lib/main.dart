@@ -320,7 +320,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               ),
                               Container(
                                 width: size.width * _buttonWidth1,
-                                height: size.height * 0.035,
+                                height: size.height * 0.038,
                                 child: _editButton1
                                     ? InkWell(
                                   onTap:()
@@ -366,7 +366,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               ),
                             ],
                           ),
-                          SizedBox(width: size.width * 0.15),
+                          SizedBox(width: size.width * 0.12),
           
                           // Add icon
                           Padding(
@@ -600,7 +600,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               ),
                             ],
                           ),
-                          SizedBox(width: size.width * 0.15),
+                          SizedBox(width: size.width * 0.12),
           
                           // Add icon
                           Padding(
@@ -826,7 +826,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               ),
                             ],
                           ),
-                          SizedBox(width: size.width * 0.15),
+                          SizedBox(width: size.width * 0.12),
           
                           // Add icon
                           Padding(
@@ -1056,7 +1056,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               ),
                             ],
                           ),
-                          SizedBox(width: size.width * 0.15),
+                          SizedBox(width: size.width * 0.12),
           
                           // Add icon
                           Padding(
@@ -1285,7 +1285,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               ),
                             ],
                           ),
-                          SizedBox(width: size.width * 0.15),
+                          SizedBox(width: size.width * 0.12),
           
                           // Add icon
                           Padding(
@@ -1513,7 +1513,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               ),
                             ],
                           ),
-                          SizedBox(width: size.width * 0.15),
+                          SizedBox(width: size.width * 0.12),
 
                           // Add icon
                           Padding(
