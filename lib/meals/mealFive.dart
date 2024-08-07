@@ -295,10 +295,10 @@ class _mealFiveState extends State<mealFive> {
                       top: 0,
                       right: 0,
                       child: Container(
-                        width: size.width * 0.185,
-                        height: size.height * 0.105,
+                        width: size.width * 0.182,
+                        height: size.height * 0.102,
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10))
+                          borderRadius: BorderRadius.only(bottomLeft: Radius.circular(15))
                           ,
                           color: Color(0xffff3eee5),
                         ),
