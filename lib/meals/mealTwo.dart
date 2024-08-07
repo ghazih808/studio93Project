@@ -1,53 +1,53 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class mealOne extends StatefulWidget{
+class mealTwo extends StatefulWidget {
   @override
-  State<mealOne> createState() => _mealOneState();
+  State<mealTwo> createState() => _mealTwoState();
 }
 
-class _mealOneState extends State<mealOne> {
+class _mealTwoState extends State<mealTwo> {
 
 
   ////for MEAL TWO
-  double _baseHeight1 = 0.15; // Initial height of the base card
-  bool _editButton1 =
+  double _baseHeight2 = 0.15; // Initial height of the base card
+  bool _editButton2 =
   false; // To check state of the edit button to toggle b/w No product and Edit card
-  bool _isEditing1 = false; // To check if the card is in edit state or not
-  double _buttonWidth1 = 0.36;
+  bool _isEditing2 = false; // To check if the card is in edit state or not
+  double _buttonWidth2 = 0.36;
 
   // For managing card height
-  void _increaseCardHeight1() {
+  void _increaseCardHeight2() {
     setState(() {
-      _baseHeight1 =
-      _baseHeight1 == 0.15 ? 0.35 : 0.15; // Toggle between two heights
-      _editButton1 = true;
-      _buttonWidth1 =
-      _buttonWidth1 == 0.36 ? 0.25 : 0.36; // Toggle between widths
+      _baseHeight2 =
+      _baseHeight2 == 0.15 ? 0.35 : 0.15; // Toggle between two heights
+      _editButton2 = true;
+      _buttonWidth2 =
+      _buttonWidth2 == 0.36 ? 0.25 : 0.36; // Toggle between widths
     });
   }
 
   // Initializing meal list
-  final List<mealItem> _mealList1 = [
+  final List<mealItem> _mealList2 = [
     mealItem(name: "Spicy Beacon Cheese Toast", calCount: 312, flag: false),
     mealItem(name: "Almond Milk", calCount: 312, flag: false),
   ];
 
   // ABOVE ARE FOR MEAL Two
 
-
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size; // Media Query for responsiveness
 
     // To keep count of the calories of items
-    int _calCount1 = _mealList1.fold(0, (sum, item) => sum + item.calCount);
+    int _calCount2 = _mealList2.fold(0, (sum, item) => sum + item.calCount);
 
     return Column(
       children: [
+        //MEAL Two CONTAINER
         Container(
           width: size.width * 0.95,
-          height: size.height * _baseHeight1,
+          height: size.height * _baseHeight2,
           child: Stack(
             children: [
               Card(
@@ -74,7 +74,7 @@ class _mealOneState extends State<mealOne> {
                               color: Color(0xffff3eee5),
                               child: Center(
                                 child: Image.asset(
-                                  "assets/icons/mealOne.png",
+                                  "assets/icons/copy.png",
                                   width: size.width * 0.07,
                                   height: size.height * 0.04,
                                   fit: BoxFit.contain,
@@ -88,10 +88,10 @@ class _mealOneState extends State<mealOne> {
                         Column(
                           children: [
                             Container(
-                              width: size.width * _buttonWidth1,
+                              width: size.width * _buttonWidth2,
                               height: size.height * 0.035,
                               child: Text(
-                                "Meal One",
+                                "Meal Two",
                                 style: TextStyle(
                                   color: Colors.black,
                                   fontWeight: FontWeight.bold,
@@ -100,22 +100,22 @@ class _mealOneState extends State<mealOne> {
                               ),
                             ),
                             Container(
-                              width: size.width * _buttonWidth1,
+                              width: size.width * _buttonWidth2,
                               height: size.height * 0.035,
-                              child: _editButton1
-                                  ? _isEditing1
+                              child: _editButton2
+                                  ? _isEditing2
                                   ? Row(
                                 children: [
                                   InkWell(
                                     onTap: () {
                                       //to toggle between save and edit button
                                       setState(() {
-                                        _isEditing1 =
-                                        !_isEditing1;
+                                        _isEditing2 =
+                                        !_isEditing2;
                                         for (var item
-                                        in _mealList1) {
+                                        in _mealList2) {
                                           item.flag =
-                                              _isEditing1; // Set flag based on edit mode
+                                              _isEditing2; // Set flag based on edit mode
                                         }
                                       });
                                     },
@@ -153,12 +153,12 @@ class _mealOneState extends State<mealOne> {
                                     onTap: () {
                                       //to toggle between save and edit button
                                       setState(() {
-                                        _isEditing1 =
-                                        !_isEditing1;
+                                        _isEditing2 =
+                                        !_isEditing2;
                                         for (var item
-                                        in _mealList1) {
+                                        in _mealList2) {
                                           item.flag =
-                                              _isEditing1; // Set flag based on edit mode
+                                              _isEditing2; // Set flag based on edit mode
                                         }
                                       });
                                     },
@@ -219,7 +219,7 @@ class _mealOneState extends State<mealOne> {
                     ),
 
                     // Condition to show meals and data if the card is expanded
-                    if (_baseHeight1 == 0.35)
+                    if (_baseHeight2 == 0.35)
                       Container(
                         width: size.width * 0.85,
                         height: size.height * 0.2,
@@ -239,8 +239,8 @@ class _mealOneState extends State<mealOne> {
                                   padding: EdgeInsets.zero,
                                   itemBuilder: (context, index) {
                                     //If is used to add last separator line
-                                    if (index < _mealList1.length) {
-                                      final _mealItem = _mealList1[index];
+                                    if (index < _mealList2.length) {
+                                      final _mealItem = _mealList2[index];
                                       return ListTile(
                                         leading: Text(
                                           _mealItem.name,
@@ -260,7 +260,7 @@ class _mealOneState extends State<mealOne> {
                                             ? InkWell(
                                           onTap: () {
                                             setState(() {
-                                              _mealList1
+                                              _mealList2
                                                   .removeAt(index);
                                             });
                                           },
@@ -284,7 +284,7 @@ class _mealOneState extends State<mealOne> {
                                     }
                                   },
                                   separatorBuilder: (context, index) {
-                                    return index < _mealList1.length - 1
+                                    return index < _mealList2.length - 1
                                         ? Divider(
                                       color: Colors.white,
                                       height: 1,
@@ -293,7 +293,7 @@ class _mealOneState extends State<mealOne> {
                                     )
                                         : SizedBox(); // To avoid extra separator at the end
                                   },
-                                  itemCount: _mealList1.length +
+                                  itemCount: _mealList2.length +
                                       1, // Increased itemCount by 1
                                 ),
                               ),
@@ -318,7 +318,7 @@ class _mealOneState extends State<mealOne> {
 
                                     // To show total calories
                                     Text(
-                                      '$_calCount1 Cals',
+                                      '$_calCount2 Cals',
                                       style: TextStyle(
                                         fontWeight: FontWeight.w500,
                                         fontSize: size.height * 0.02,
@@ -353,7 +353,7 @@ class _mealOneState extends State<mealOne> {
                   top: 0,
                   right: 0,
                   child: InkWell(
-                    onTap: _increaseCardHeight1,
+                    onTap: _increaseCardHeight2,
                     child: Container(
                       width: size.width * 0.18,
                       height: size.height * 0.1,
@@ -381,7 +381,6 @@ class _mealOneState extends State<mealOne> {
       ],
     );
   }
-
 }
 
 // For Meal
