@@ -219,7 +219,7 @@ class _mealFiveState extends State<mealFive> {
                                         title: Row(
                                           mainAxisAlignment: MainAxisAlignment.end,
                                           children: [
-                                            Text('${_mealItem.calCount} Cals'),
+                                            Text('${_mealItem.calCount} Cals',style: TextStyle(fontSize: size.width*0.035),),
                                           ],
                                         ),
                                         trailing: _mealItem.flag

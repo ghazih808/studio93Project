@@ -253,7 +253,7 @@ class _mealSixState extends State<mealSix> {
                                           MainAxisAlignment.end,
                                           children: [
                                             Text(
-                                                '${_mealItem.calCount} Cals'),
+                                                '${_mealItem.calCount} Cals',style: TextStyle(fontSize: size.width*0.035),),
                                           ],
                                         ),
                                         trailing: _mealItem.flag
@@ -382,6 +382,9 @@ class _mealSixState extends State<mealSix> {
     );
   }
 }
+
+
+
 
 //for meal items list
 class mealItem {

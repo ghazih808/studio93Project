@@ -253,7 +253,7 @@ class _mealTwoState extends State<mealTwo> {
                                           MainAxisAlignment.end,
                                           children: [
                                             Text(
-                                                '${_mealItem.calCount} Cals'),
+                                                '${_mealItem.calCount} Cals',style: TextStyle(fontSize: size.width*0.035),),
                                           ],
                                         ),
                                         trailing: _mealItem.flag
